@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTagActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tagCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="36dp"
+            android:text="Tags added: 0" />
+
+        <TextView
+            android:id="@+id/tagSerial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textSize="24dp"
+            android:text="Serial: " />
+
+        <TextView
+            android:id="@+id/tagDir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:text="Direction: " />
+
+        <EditText
+            android:id="@+id/labelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Label"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/north"
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:textSize="10dp"
+                android:text="North"
+                android:onClick="setNorth"/>
+
+            <Button
+                android:id="@+id/south"
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:textSize="10dp"
+                android:text="South"
+                android:onClick="setSouth" />
+
+            <Button
+                android:id="@+id/east"
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:textSize="10dp"
+                android:text="East"
+                android:onClick="setEast" />
+
+            <Button
+                android:id="@+id/west"
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:textSize="10dp"
+                android:text="West"
+                android:onClick="setWest" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/addTag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Add tag"
+            android:onClick="addTag0"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/startOver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start over"
+            android:onClick="startOver"/>
+
+        <Button
+            android:id="@+id/done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:onClick="goBack"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
